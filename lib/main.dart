@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'HomeClean',
       theme: AppThemes.lightTheme,
       home: const LoginScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
