@@ -20,12 +20,19 @@ abstract class AppTextStyles {
         fontWeight: FontWeight.bold,
       );
 
+  static TextStyle styleMedium14(BuildContext context) => TextStyle(
+        color: AppColors.whiteColor,
+        fontSize: getResponsiveFontSize(context, fontSize: 14),
+        fontWeight: FontWeight.w500,
+      );
+
   static TextStyle styleBold20(BuildContext context) => TextStyle(
         color: AppColors.darkBlueColor,
         fontSize: getResponsiveFontSize(context, fontSize: 20),
         fontWeight: FontWeight.bold,
       );
 
+// Responsive fun
   static double getResponsiveFontSize(BuildContext context,
       {required double fontSize}) {
     double scaleFactor = getScaleFactor(context);
