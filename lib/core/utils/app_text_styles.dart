@@ -93,48 +93,6 @@ abstract class AppTextStyles {
         fontWeight: FontWeight.w600,
       );
 
-  // static TextStyle styleRegular20(BuildContext context) => TextStyle(
-  //       color: AppColors.darkBlueColor,
-  //       fontSize: getResponsiveFontSize(context, fontSize: 18),
-  //       fontWeight: FontWeight.normal,
-  //     );
-
-  // static TextStyle styleRegular13(BuildContext context) => TextStyle(
-  //       color: AppColors.darkGreyColor,
-  //       fontSize: getResponsiveFontSize(context, fontSize: 13),
-  //       fontWeight: FontWeight.normal,
-  //     );
-
-  // static TextStyle styleRegular11(BuildContext context) => TextStyle(
-  //       color: AppColors.darkGreyColor,
-  //       fontSize: getResponsiveFontSize(context, fontSize: 11),
-  //       fontWeight: FontWeight.normal,
-  //     );
-
-  // static TextStyle styleRegular16(BuildContext context) => TextStyle(
-  //       color: AppColors.blackColor,
-  //       fontSize: getResponsiveFontSize(context, fontSize: 16),
-  //       fontWeight: FontWeight.normal,
-  //     );
-
-  // static TextStyle styleBold14(BuildContext context) => TextStyle(
-  //       color: AppColors.darkBlueColor,
-  //       fontSize: getResponsiveFontSize(context, fontSize: 14),
-  //       fontWeight: FontWeight.bold,
-  //     );
-
-  // static TextStyle styleMedium14(BuildContext context) => TextStyle(
-  //       color: AppColors.whiteColor,
-  //       fontSize: getResponsiveFontSize(context, fontSize: 14),
-  //       fontWeight: FontWeight.w500,
-  //     );
-
-  // static TextStyle styleBold20(BuildContext context) => TextStyle(
-  //       color: AppColors.darkBlueColor,
-  //       fontSize: getResponsiveFontSize(context, fontSize: 20),
-  //       fontWeight: FontWeight.bold,
-  //     );
-
 // Responsive fun
   static double getResponsiveFontSize(BuildContext context,
       {required double fontSize}) {
