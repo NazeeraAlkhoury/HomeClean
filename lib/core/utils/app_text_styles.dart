@@ -14,6 +14,18 @@ abstract class AppTextStyles {
         fontWeight: FontWeight.normal,
       );
 
+  static TextStyle styleRegular11(BuildContext context) => TextStyle(
+        color: AppColors.darkGreyColor,
+        fontSize: getResponsiveFontSize(context, fontSize: 11),
+        fontWeight: FontWeight.normal,
+      );
+
+  static TextStyle styleRegular16(BuildContext context) => TextStyle(
+        color: AppColors.blackColor,
+        fontSize: getResponsiveFontSize(context, fontSize: 16),
+        fontWeight: FontWeight.normal,
+      );
+
   static TextStyle styleBold14(BuildContext context) => TextStyle(
         color: AppColors.darkBlueColor,
         fontSize: getResponsiveFontSize(context, fontSize: 14),

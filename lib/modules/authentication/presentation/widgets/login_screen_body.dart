@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:homeclean/core/utils/app_image_assets.dart';
 
 import 'package:homeclean/core/utils/app_text_styles.dart';
 import 'package:homeclean/core/widgets/app_button.dart';
+import 'package:homeclean/modules/authentication/presentation/widgets/custom_form_field.dart';
 
 class LoginScreenBody extends StatelessWidget {
   const LoginScreenBody({super.key});
@@ -17,13 +19,9 @@ class LoginScreenBody extends StatelessWidget {
               'تسجيل الدخول',
               style: AppTextStyles.styleBold20(context),
             ),
-            // SizedBox(
-            //   height: 10,
-            // ),
-            // SvgPicture.asset(AppImageAssets.privacyPolicy,
-            //     placeholderBuilder: (BuildContext context) =>
-            //         const CircularProgressIndicator(),
-            //     fit: BoxFit.contain),
+            const SizedBox(
+              height: 10,
+            ),
             Image.asset(AppImageAssets.mobileLogin),
             const SizedBox(
               height: 10,
@@ -33,7 +31,11 @@ class LoginScreenBody extends StatelessWidget {
               style: AppTextStyles.styleRegular13(context),
             ),
             const SizedBox(
-              height: 10,
+              height: 20,
+            ),
+            const CustomFormField(),
+            const SizedBox(
+              height: 20,
             ),
             AppButton(
               label: 'ارسال',
