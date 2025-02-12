@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homeclean/core/utils/app_themes.dart';
-import 'package:homeclean/modules/authentication/presentation/screens/login_screen.dart';
+import 'package:homeclean/modules/client/splash/presentation/views/splash_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'HomeClean',
       theme: AppThemes.lightTheme,
-      home: const LoginScreen(),
+      home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
