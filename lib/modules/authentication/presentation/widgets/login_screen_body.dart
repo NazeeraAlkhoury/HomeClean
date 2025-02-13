@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:homeclean/core/localization/locale_keys.dart';
 
 import 'package:homeclean/core/utils/app_image_assets.dart';
 
@@ -19,7 +21,7 @@ class LoginScreenBody extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'تسجيل الدخول',
+                LocaleKeys.login.tr(),
                 style: AppTextStyles.styleBold20(context),
               ),
               const SizedBox(
@@ -30,7 +32,7 @@ class LoginScreenBody extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                'أدخل رقم الموبايل لتسجيل الدخول',
+                LocaleKeys.enterMobileLogin.tr(),
                 style: AppTextStyles.styleRegular13(context),
               ),
               const SizedBox(
@@ -41,7 +43,7 @@ class LoginScreenBody extends StatelessWidget {
                 height: 24,
               ),
               AppButton(
-                label: 'ارسال',
+                label: LocaleKeys.next.tr(),
                 onPressed: () {},
               ),
               const SizedBox(
@@ -49,8 +51,15 @@ class LoginScreenBody extends StatelessWidget {
               ),
               Row(
                 children: [
-                  const Text('أليس لديك حساب'),
-                  TextButton(onPressed: () {}, child: const Text('انشىء حساب')),
+                  Text(
+                    LocaleKeys.noAccount.tr(),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      LocaleKeys.createAccount.tr(),
+                    ),
+                  ),
                 ],
               ),
             ],
