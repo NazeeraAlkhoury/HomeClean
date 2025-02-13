@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homeclean/core/utils/app_colors.dart';
 import 'package:homeclean/core/utils/app_text_styles.dart';
 
 class CustomSlideText extends StatelessWidget {
@@ -19,7 +20,9 @@ class CustomSlideText extends StatelessWidget {
           fit: BoxFit.scaleDown,
           child: Text(
             'Bringing cleanliness and comfort to your home.',
-            style: AppTextStyles.styleBold18(context),
+            style: AppTextStyles.styleBold18(context).copyWith(
+              color: AppColors.medBlueColor,
+            ),
           ),
         ),
       ),

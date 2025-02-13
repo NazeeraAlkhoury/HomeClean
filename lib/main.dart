@@ -2,7 +2,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:homeclean/core/localization/app_localization.dart';
 import 'package:homeclean/core/utils/app_themes.dart';
-import 'package:homeclean/modules/authentication/presentation/screens/login_screen.dart';
 import 'package:homeclean/modules/client/splash/presentation/views/splash_view.dart';
 
 void main() async {

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:homeclean/core/utils/app_colors.dart';
 import 'package:homeclean/modules/authentication/presentation/screens/login_screen.dart';
 import 'package:homeclean/modules/client/splash/presentation/widgets/custom_scale_logo.dart';
 import 'package:homeclean/modules/client/splash/presentation/widgets/custom_slide_text.dart';
@@ -34,6 +35,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.darkBlueColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
