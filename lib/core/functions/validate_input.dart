@@ -1,4 +1,9 @@
-String? validateInput(String val, int min, int max, String type) {
+String? validateInput({
+  required String val,
+  required int min,
+  required int max,
+  required String type,
+}) {
   if (val.isEmpty) {
     return "لا يمكن أن يكون فارغًا";
   }

@@ -1,5 +1,8 @@
+// ignore_for_file: avoid_print
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:homeclean/core/functions/validate_input.dart';
 import 'package:homeclean/core/localization/locale_keys.dart';
 import 'package:homeclean/core/utils/app_colors.dart';
 
@@ -15,6 +18,9 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController phoneController = TextEditingController();
+    final formKey = GlobalKey<FormState>();
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -45,13 +51,34 @@ class LoginViewBody extends StatelessWidget {
                 const SizedBox(
                   height: 25,
                 ),
-                const CustomFormField(),
-                const SizedBox(
-                  height: 25,
-                ),
-                AppButton(
-                  label: LocaleKeys.next.tr(),
-                  onPressed: () {},
+                Form(
+                  key: formKey,
+                  child: Column(
+                    children: [
+                      CustomFormField(
+                        controller: phoneController,
+                        hint: '0999205081',
+                        label: LocaleKeys.mobileNumber.tr(),
+                        keyboardType: TextInputType.phone,
+                        onChanged: (value) => print(value),
+                        validator: (value) => validateInput(
+                          val: value!,
+                          min: 10,
+                          max: 10,
+                          type: 'phone',
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      AppButton(
+                        label: LocaleKeys.next.tr(),
+                        onPressed: () {
+                          formKey.currentState?.validate();
+                        },
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: 20,
