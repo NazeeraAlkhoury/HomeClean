@@ -38,3 +38,27 @@ class AcceptTermsHeader extends StatelessWidget {
     );
   }
 }
+
+// class InkwellTextButton extends StatelessWidget {
+//   final String text;
+//   final void Function()? onTap;
+//   const InkwellTextButton({
+//     super.key,
+//     required this.text,
+//     this.onTap,
+//   });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return InkWell(
+//       onTap: onTap,
+//       child: Text(
+//         text,
+//         style: AppTextStyles.styleRegular13(context).copyWith(
+//           color: AppColors.primaryColor,
+//           decorationColor: AppColors.primaryColor,
+//         ),
+//       ),
+//     );
+//   }
+// }

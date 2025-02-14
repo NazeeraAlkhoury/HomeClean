@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:homeclean/core/localization/app_localization.dart';
 import 'package:homeclean/core/utils/app_themes.dart';
-import 'package:homeclean/modules/authentication/presentation/views/login/accept_terms_view.dart';
+import 'package:homeclean/modules/authentication/presentation/views/login/login_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       // localeResolutionCallback: (locale, supportedLocales) {
       //   return supportedLocales.contains(locale) ? locale : Locale('en', 'US');
       // },
-      home: const AcceptTermsView(),
+      home: const LoginView(),
       debugShowCheckedModeBanner: false,
     );
   }

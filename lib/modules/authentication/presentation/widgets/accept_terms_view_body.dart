@@ -33,10 +33,11 @@ class AcceptTermsViewBody extends StatelessWidget {
                   onPressed: () {},
                 ),
                 const SizedBox(
-                  height: 5,
+                  height: 15,
                 ),
                 AppTextButton(
                   onPressed: () {},
+                  text: LocaleKeys.exit.tr(),
                 ),
               ],
             ),

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:homeclean/core/utils/app_colors.dart';
-import 'package:homeclean/modules/authentication/presentation/views/login/login_screen.dart';
+import 'package:homeclean/modules/authentication/presentation/views/login/login_view.dart';
 import 'package:homeclean/modules/client/splash/presentation/widgets/custom_scale_logo.dart';
 import 'package:homeclean/modules/client/splash/presentation/widgets/custom_slide_text.dart';
 
@@ -79,7 +79,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     return Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
+        MaterialPageRoute(builder: (context) => const LoginView()),
       );
     });
   }
