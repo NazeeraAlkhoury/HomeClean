@@ -26,6 +26,9 @@ class MyApp extends StatelessWidget {
       locale: context.locale,
       supportedLocales: context.supportedLocales,
       localizationsDelegates: context.localizationDelegates,
+      // localeResolutionCallback: (locale, supportedLocales) {
+      //   return supportedLocales.contains(locale) ? locale : Locale('en', 'US');
+      // },
       home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );

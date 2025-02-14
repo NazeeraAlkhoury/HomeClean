@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:homeclean/core/utils/app_colors.dart';
-import 'package:homeclean/modules/authentication/presentation/screens/login_screen.dart';
+import 'package:homeclean/modules/authentication/presentation/views/login_screen.dart';
 import 'package:homeclean/modules/client/splash/presentation/widgets/custom_scale_logo.dart';
 import 'package:homeclean/modules/client/splash/presentation/widgets/custom_slide_text.dart';
 
