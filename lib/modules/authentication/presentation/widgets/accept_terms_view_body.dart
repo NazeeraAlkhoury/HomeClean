@@ -15,28 +15,32 @@ class AcceptTermsViewBody extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(24.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const AcceptTermsHeader(),
-            const SizedBox(
-              height: 50,
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const AcceptTermsHeader(),
+                const SizedBox(
+                  height: 50,
+                ),
+                Image.asset(AppImageAssets.privacyPolicy),
+                const SizedBox(
+                  height: 50,
+                ),
+                AppButton(
+                  label: LocaleKeys.agreeContinue.tr(),
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                AppTextButton(
+                  onPressed: () {},
+                ),
+              ],
             ),
-            Image.asset(AppImageAssets.privacyPolicy),
-            const SizedBox(
-              height: 50,
-            ),
-            AppButton(
-              label: LocaleKeys.agreeContinue.tr(),
-              onPressed: () {},
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            AppTextButton(
-              onPressed: () {},
-            ),
-          ],
+          ),
         ),
       ),
     );
