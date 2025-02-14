@@ -8,5 +8,10 @@ abstract class AppThemes {
     primaryColor: AppColors.primaryColor,
     scaffoldBackgroundColor: Colors.white,
     textTheme: GoogleFonts.cairoTextTheme(),
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: AppColors.primaryColor,
+      primary: AppColors.primaryColor,
+      brightness: Brightness.light,
+    ),
   );
 }
