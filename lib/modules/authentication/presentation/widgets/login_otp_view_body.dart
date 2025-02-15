@@ -1,6 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:homeclean/core/widgets/app_button.dart';
+import 'package:homeclean/core/widgets/app_text_button.dart';
 import 'package:homeclean/modules/authentication/presentation/widgets/custom_otp_verification.dart';
+import 'package:homeclean/modules/authentication/presentation/widgets/custom_resend_code.dart';
 
 import '../../../../core/localization/locale_keys.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -42,6 +45,31 @@ class LoginOtpViewBody extends StatelessWidget {
             const Padding(
               padding: EdgeInsetsDirectional.only(start: 24, end: 14),
               child: CustomOtpVerification(),
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: AppButton(
+                label: LocaleKeys.login,
+                onPressed: () {},
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const CustomResendCode(),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                AppTextButton(
+                  text: LocaleKeys.back,
+                ),
+              ],
             ),
           ],
         ),
