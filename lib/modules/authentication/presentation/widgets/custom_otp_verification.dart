@@ -15,24 +15,27 @@ class CustomOtpVerification extends StatelessWidget {
       (index) => FocusNode(),
     );
 
-    return Row(
-      children: List.generate(5, (index) {
-        return Expanded(
-          child: CustomOtpField(
-            controller: controller[index],
-            focusNode: focusNode[index],
-            onChanged: (String value) {
-              if (value.isNotEmpty && index < 4) {
-                FocusScope.of(context).requestFocus(focusNode[index + 1]);
-              }
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Row(
+        children: List.generate(5, (index) {
+          return Expanded(
+            child: CustomOtpField(
+              controller: controller[index],
+              focusNode: focusNode[index],
+              onChanged: (String value) {
+                if (value.isNotEmpty && index < 4) {
+                  FocusScope.of(context).requestFocus(focusNode[index + 1]);
+                }
 
-              if (value.isEmpty && index > 0) {
-                FocusScope.of(context).requestFocus(focusNode[index - 1]);
-              }
-            },
-          ),
-        );
-      }),
+                if (value.isEmpty && index > 0) {
+                  FocusScope.of(context).requestFocus(focusNode[index - 1]);
+                }
+              },
+            ),
+          );
+        }),
+      ),
     );
   }
 }
