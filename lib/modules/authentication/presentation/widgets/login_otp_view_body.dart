@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:homeclean/core/widgets/app_button.dart';
-import 'package:homeclean/core/widgets/app_text_button.dart';
+import 'package:homeclean/modules/authentication/presentation/widgets/custom_back_row.dart';
 import 'package:homeclean/modules/authentication/presentation/widgets/custom_otp_verification.dart';
 import 'package:homeclean/modules/authentication/presentation/widgets/custom_resend_code.dart';
 
@@ -20,7 +20,7 @@ class LoginOtpViewBody extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(
-              height: 20,
+              height: 44,
             ),
             Text(
               LocaleKeys.login.tr(),
@@ -43,7 +43,7 @@ class LoginOtpViewBody extends StatelessWidget {
               height: 25,
             ),
             const Padding(
-              padding: EdgeInsetsDirectional.only(start: 24, end: 14),
+              padding: EdgeInsets.only(left: 24, right: 14),
               child: CustomOtpVerification(),
             ),
             const SizedBox(
@@ -52,7 +52,7 @@ class LoginOtpViewBody extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: AppButton(
-                label: LocaleKeys.login,
+                label: LocaleKeys.login.tr(),
                 onPressed: () {},
               ),
             ),
@@ -63,14 +63,7 @@ class LoginOtpViewBody extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                AppTextButton(
-                  text: LocaleKeys.back,
-                ),
-              ],
-            ),
+            const CustomBackRow(),
           ],
         ),
       ),
