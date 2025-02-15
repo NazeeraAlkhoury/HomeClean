@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:homeclean/modules/authentication/presentation/widgets/custom_otp_verification.dart';
 
 import '../../../../core/localization/locale_keys.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -12,32 +13,38 @@ class LoginOtpViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        children: [
-          const SizedBox(
-            height: 20,
-          ),
-          Text(
-            LocaleKeys.login.tr(),
-            style: AppTextStyles.styleBold20(context),
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          Image.asset(AppImageAssets.mobileLogin),
-          const SizedBox(
-            height: 40,
-          ),
-          Text(
-            LocaleKeys.sentLoginCode.tr(),
-            style: AppTextStyles.styleRegular13(context).copyWith(
-              color: AppColors.darkGreyColor,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 20,
             ),
-          ),
-          const SizedBox(
-            height: 25,
-          ),
-        ],
+            Text(
+              LocaleKeys.login.tr(),
+              style: AppTextStyles.styleBold20(context),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Image.asset(AppImageAssets.mobileLogin),
+            const SizedBox(
+              height: 40,
+            ),
+            Text(
+              LocaleKeys.sentLoginCode.tr(),
+              style: AppTextStyles.styleRegular13(context).copyWith(
+                color: AppColors.darkGreyColor,
+              ),
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+            const Padding(
+              padding: EdgeInsetsDirectional.only(start: 24, end: 14),
+              child: CustomOtpVerification(),
+            ),
+          ],
+        ),
       ),
     );
   }
