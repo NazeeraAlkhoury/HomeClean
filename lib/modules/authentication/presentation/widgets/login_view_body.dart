@@ -6,7 +6,7 @@ import 'package:homeclean/core/utils/app_colors.dart';
 import 'package:homeclean/core/utils/app_image_assets.dart';
 
 import 'package:homeclean/core/utils/app_text_styles.dart';
-import 'package:homeclean/modules/authentication/presentation/widgets/custom_noaccount_signup.dart';
+import 'package:homeclean/modules/authentication/presentation/widgets/noaccount_signup_row.dart';
 import 'package:homeclean/modules/authentication/presentation/widgets/login_form.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -48,7 +48,7 @@ class LoginViewBody extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const CustomNoAccountSignUp(),
+                const NoAccountSignUpRow(),
               ],
             ),
           ),

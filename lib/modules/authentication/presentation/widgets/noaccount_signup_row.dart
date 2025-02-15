@@ -6,8 +6,8 @@ import 'package:homeclean/core/utils/app_colors.dart';
 import 'package:homeclean/core/utils/app_text_styles.dart';
 import 'package:homeclean/core/widgets/app_text_button.dart';
 
-class CustomNoAccountSignUp extends StatelessWidget {
-  const CustomNoAccountSignUp({
+class NoAccountSignUpRow extends StatelessWidget {
+  const NoAccountSignUpRow({
     super.key,
   });
 
