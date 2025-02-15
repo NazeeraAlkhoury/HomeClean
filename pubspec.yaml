@@ -29,6 +29,8 @@ dependencies:
   dartz: ^0.10.1
   get_it: ^7.7.0
 
+  expandable_page_view: ^1.0.17
+
   flutter_localizations:
     sdk: flutter
   easy_localization: ^3.0.7
