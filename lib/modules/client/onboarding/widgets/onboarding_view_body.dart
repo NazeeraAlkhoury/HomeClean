@@ -1,13 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:homeclean/core/localization/locale_keys.dart';
-import 'package:homeclean/core/utils/app_colors.dart';
 import 'package:homeclean/core/utils/app_image_assets.dart';
-import 'package:homeclean/core/utils/app_text_styles.dart';
 import 'package:homeclean/core/widgets/app_button.dart';
 import 'package:homeclean/core/widgets/app_text_button.dart';
 import 'package:homeclean/modules/client/onboarding/widgets/dots_indicator.dart';
+import 'package:homeclean/modules/client/onboarding/widgets/onboarding_page_view.dart';
 import 'package:homeclean/modules/client/onboarding/widgets/pageview_item.dart';
 
 class OnboardingViewBody extends StatefulWidget {
@@ -66,20 +64,14 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
             const SizedBox(
               height: 40,
             ),
-            ExpandablePageView.builder(
-              controller: pageController,
-              alignment: Alignment.topCenter,
-              physics: const NeverScrollableScrollPhysics(),
-              onPageChanged: (value) {
-                setState(() {
-                  currentPage = value;
-                });
-              },
-              itemCount: onBoarding.length,
-              itemBuilder: (context, index) => PageViewItem(
-                model: onBoarding[index],
-              ),
-            ),
+            OnBoardingPageView(
+                pageController: pageController,
+                list: onBoarding,
+                onPageChanged: (value) {
+                  setState(() {
+                    currentPage = value;
+                  });
+                }),
             const SizedBox(
               height: 25,
             ),
@@ -92,16 +84,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
             AppButton(
               label: LocaleKeys.next.tr(),
               onPressed: () {
-                setState(() {
-                  if (currentPage < onBoarding.length - 1) {
-                    pageController.nextPage(
-                      duration: const Duration(
-                        seconds: 1,
-                      ),
-                      curve: Curves.easeInOut,
-                    );
-                  }
-                });
+                goToNextPage();
               },
             ),
             const SizedBox(
@@ -110,16 +93,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
             AppTextButton(
               text: LocaleKeys.previous.tr(),
               onPressed: () {
-                setState(() {
-                  if (0 < currentPage && currentPage < onBoarding.length) {
-                    pageController.previousPage(
-                      duration: const Duration(
-                        seconds: 1,
-                      ),
-                      curve: Curves.easeInOut,
-                    );
-                  }
-                });
+                goToPrevious();
               },
             ),
             const SizedBox(
@@ -129,5 +103,31 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
         ),
       ),
     );
+  }
+
+  void goToNextPage() {
+    return setState(() {
+      if (currentPage < onBoarding.length - 1) {
+        pageController.nextPage(
+          duration: const Duration(
+            seconds: 1,
+          ),
+          curve: Curves.easeInOut,
+        );
+      }
+    });
+  }
+
+  void goToPrevious() {
+    return setState(() {
+      if (0 < currentPage && currentPage < onBoarding.length) {
+        pageController.previousPage(
+          duration: const Duration(
+            seconds: 1,
+          ),
+          curve: Curves.easeInOut,
+        );
+      }
+    });
   }
 }
