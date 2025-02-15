@@ -1,4 +1,14 @@
 abstract class LocaleKeys {
+  //onBoarding
+  static const String onboardingTitle1 = 'onboarding_title_1';
+  static const String onboardingTitle2 = 'onboarding_title_2';
+  static const String onboardingTitle3 = 'onboarding_title_3';
+  static const String welcomeHomeClean = 'welcome_home_clean';
+  static const String onBoarding1 = 'onboarding_1';
+  static const String onBoarding2 = 'onboarding_2';
+  static const String onBoarding3 = 'onboarding_3';
+
+  //Login
   static const String terms = 'terms_of_use';
   static const String agreeToProcess = 'agree_to_process';
   static const String agreeContinue = 'agree_continue';
@@ -23,4 +33,5 @@ abstract class LocaleKeys {
   static const String idNumber = 'id_number';
   static const String location = 'location';
   static const String allowLocation = 'allow_location';
+  static const String previous = 'previous';
 }
