@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:homeclean/core/localization/app_localization.dart';
 import 'package:homeclean/core/utils/app_themes.dart';
-import 'package:homeclean/modules/client/onboarding/views/onboarding_view.dart';
+import 'package:homeclean/modules/client/onboarding/presentation/views/onboarding_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

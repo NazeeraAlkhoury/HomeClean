@@ -4,9 +4,9 @@ import 'package:homeclean/core/localization/locale_keys.dart';
 import 'package:homeclean/core/utils/app_image_assets.dart';
 import 'package:homeclean/core/widgets/app_button.dart';
 import 'package:homeclean/core/widgets/app_text_button.dart';
-import 'package:homeclean/modules/client/onboarding/widgets/dots_indicator.dart';
-import 'package:homeclean/modules/client/onboarding/widgets/onboarding_page_view.dart';
-import 'package:homeclean/modules/client/onboarding/widgets/pageview_item.dart';
+import 'package:homeclean/modules/client/onboarding/presentation/widgets/dots_indicator.dart';
+import 'package:homeclean/modules/client/onboarding/presentation/widgets/onboarding_page_view.dart';
+import 'package:homeclean/modules/client/onboarding/presentation/widgets/pageview_item.dart';
 
 class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});

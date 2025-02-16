@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:homeclean/modules/client/onboarding/widgets/custom_dot.dart';
+import 'package:homeclean/modules/client/onboarding/presentation/widgets/custom_dot.dart';
 
 class DotsIndicator extends StatelessWidget {
   const DotsIndicator({

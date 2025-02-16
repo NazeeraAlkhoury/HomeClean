@@ -1,6 +1,6 @@
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
-import 'package:homeclean/modules/client/onboarding/widgets/pageview_item.dart';
+import 'package:homeclean/modules/client/onboarding/presentation/widgets/pageview_item.dart';
 
 class OnBoardingPageView extends StatelessWidget {
   final List<OnboardingItemModel> list;
