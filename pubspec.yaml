@@ -31,6 +31,8 @@ dependencies:
 
   expandable_page_view: ^1.0.17
 
+  device_preview: ^1.2.0
+
   flutter_localizations:
     sdk: flutter
   easy_localization: ^3.0.7
