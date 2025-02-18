@@ -1,4 +1,9 @@
 abstract class LocaleKeys {
+  //Choose Lang
+  static const String chooseLanguage = 'choose_language';
+  static const String arabic = 'arabic';
+  static const String english = 'english';
+
   //onBoarding
   static const String onboardingTitle1 = 'onboarding_title_1';
   static const String onboardingTitle2 = 'onboarding_title_2';
