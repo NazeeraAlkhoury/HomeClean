@@ -52,55 +52,63 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
     pageController = PageController();
 
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          children: [
-            Image.asset(
-              AppImageAssets.logo,
-              height: 60,
-              width: 50,
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            OnBoardingPageView(
-                pageController: pageController,
-                list: onBoarding,
-                onPageChanged: (value) {
-                  setState(() {
-                    currentPage = value;
-                  });
-                }),
-            const SizedBox(
-              height: 25,
-            ),
-            DotsIndicator(currentPage: currentPage),
-            const Expanded(
-              child: SizedBox(
-                height: 25,
+      child: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                children: [
+                  Image.asset(
+                    AppImageAssets.logo,
+                    height: 60,
+                    width: 50,
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        OnBoardingPageView(
+                            pageController: pageController,
+                            list: onBoarding,
+                            onPageChanged: (value) {
+                              setState(() {
+                                currentPage = value;
+                              });
+                            }),
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        DotsIndicator(currentPage: currentPage),
+                      ],
+                    ),
+                  ),
+                  AppButton(
+                    label: LocaleKeys.next.tr(),
+                    onPressed: () {
+                      goToNextPage();
+                    },
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  AppTextButton(
+                    text: LocaleKeys.previous.tr(),
+                    onPressed: () {
+                      goToPrevious();
+                    },
+                  ),
+                  if (MediaQuery.sizeOf(context).height >= 650)
+                    const SizedBox(
+                      height: 40,
+                      // height: MediaQuery.of(context).size.height * 0.05,
+                    ),
+                ],
               ),
             ),
-            AppButton(
-              label: LocaleKeys.next.tr(),
-              onPressed: () {
-                goToNextPage();
-              },
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            AppTextButton(
-              text: LocaleKeys.previous.tr(),
-              onPressed: () {
-                goToPrevious();
-              },
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
