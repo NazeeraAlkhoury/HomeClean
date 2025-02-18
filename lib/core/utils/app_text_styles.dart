@@ -86,6 +86,11 @@ abstract class AppTextStyles {
         fontSize: getResponsiveFontSize(context, fontSize: 15),
         fontWeight: FontWeight.w400,
       );
+  static TextStyle styleRegular20(BuildContext context) => TextStyle(
+        color: AppColors.darkBlueColor,
+        fontSize: getResponsiveFontSize(context, fontSize: 20),
+        fontWeight: FontWeight.w400,
+      );
 
   static TextStyle styleSemiBold12(BuildContext context) => TextStyle(
         color: AppColors.blackColor,
